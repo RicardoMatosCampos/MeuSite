@@ -1,23 +1,21 @@
-
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
 }
 
-html{
+html {
     height: 100vh;
     font-size: 14px;
 }
 
-body{
+body {
     background-image: linear-gradient(to left, #02DBE4, #000131);
     height: 100%;
 }
 
-.container{
+.container {
     height: 100%;
     max-width: 550px;
     margin: 0 auto;
@@ -29,44 +27,57 @@ body{
 
 }
 
-a{
+i.bi-whatsapp {
+    text-decoration: none;
+    color: #4aa11f;
+}
+i.bi-facebook {
+    text-decoration: none;
+    color: #2b6baf;
+}
+i.bi-github {
+    text-decoration: none;
+    color: #000407eb;
+}
+
+a {
     text-decoration: none;
     color: #fff;
 }
 
-.degrade{
+.degrade {
     background: linear-gradient(to right, #FE4701, #FF0054);
 }
 
 /* ESTILO DO HEADER */
 
-header{
+header {
     text-align: center;
     margin-bottom: 40px;
 }
 
-header img{
+header img {
     max-width: 150px;
     margin-bottom: 20px;
     border-radius: 50%;
 }
 
-header h1{
+header h1 {
     font-size: 2em;
     margin-bottom: 10px;
-    color: #5e5e5e;
+    color: #090402;
     font-weight: 300;
 }
 
 /* ESTILO DOS BOTÕES */
 
-section.botoes-links{
+section.botoes-links {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-a.link button{
+a.link button {
     width: 100%;
     padding: 10px 20px;
     display: flex;
@@ -82,22 +93,23 @@ a.link button{
     transition: .2s;
 }
 
-a.link i{
+a.link i {
     font-size: 1.5em;
 }
 
-a.link button:hover, footer a.btn-footer:hover{
+a.link button:hover,
+footer a.btn-footer:hover {
     transform: scale(1.05);
 }
 
 /* ESTILO DO FOOTER */
 
-footer{
+footer {
     text-align: center;
     margin: 30px;
 }
 
-footer a.btn-footer{
+footer a.btn-footer {
     width: 60px;
     height: 60px;
     display: inline-block;

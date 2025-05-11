@@ -45,8 +45,7 @@ Te amo com todo o meu coração, hoje e sempre.<br>
 
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+document.head.appendChild(tag);
 
 var player;
 
@@ -59,13 +58,24 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
+    // Mutar e tocar inicialmente (cumprindo autoplay sem som)
+    player.mute();
+    player.playVideo();
+
+    // Função para ativar o som no primeiro toque/click
     function ativarSom() {
         player.unMute();
         player.playVideo();
+        removerEventos(); // Remove os listeners após ativar o som
+    }
+
+    // Adicionar listeners para mobile e desktop
+    document.addEventListener('click', ativarSom);
+    document.addEventListener('touchstart', ativarSom);
+
+    // Função para limpar os eventos após o primeiro toque
+    function removerEventos() {
         document.removeEventListener('click', ativarSom);
         document.removeEventListener('touchstart', ativarSom);
     }
-
-    document.addEventListener('click', ativarSom);
-    document.addEventListener('touchstart', ativarSom);
 }

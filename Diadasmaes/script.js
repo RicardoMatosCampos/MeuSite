@@ -40,3 +40,32 @@ Hoje, neste Dia das Mães, eu celebro a mulher maravilhosa que você é e agrade
 Te amo com todo o meu coração, hoje e sempre.<br>
 <strong>🌸 Feliz Dia das Mães! 🌸</strong>`;
 });
+
+// API do YouTube
+
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        events: {
+            'onReady': onPlayerReady
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    function ativarSom() {
+        player.unMute();
+        player.playVideo();
+        document.removeEventListener('click', ativarSom);
+        document.removeEventListener('touchstart', ativarSom);
+    }
+
+    document.addEventListener('click', ativarSom);
+    document.addEventListener('touchstart', ativarSom);
+}

@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1 {
+    color: #e91e63;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.trecho-musica {
+    font-style: italic;
+    color: #e91e63;
+    margin: 20px 0;
+    font-size: 18px;
+}
+
+.fotos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.fotos img {
+    width: 15%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.video {
+    margin: 20px 0;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+#contador {
+    text-align: right;
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 15px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #c2185b;
+}
+
+#homenagemExibida {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #333;
+    padding: 15px;
+    background: #ffe4e1;
+    border-radius: 10px;
+}
+
+
+
+/* Animações Laterais */
+#animacoesLaterais {
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Não interfere com cliques */
+    overflow: hidden;
+    z-index: 999;
+}
+
+.flutuante {
+    position: absolute;
+    font-size: 2rem;
+    animation: subir 10s linear forwards;
+    opacity: 0.8;
+}
+
+@keyframes subir {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+

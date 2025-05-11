@@ -11,7 +11,7 @@ body {
     background: #fff;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -38,12 +38,19 @@ h1 {
     gap: 10px;
     margin: 20px 0;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 .fotos img {
     width: 15%;
+    height: auto;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.fotos img:hover {
+    transform: scale(1.1);
 }
 
 .video {
@@ -101,7 +108,8 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    pointer-events: none; /* Não interfere com cliques */
+    pointer-events: none;
+    /* Não interfere com cliques */
     overflow: hidden;
     z-index: 999;
 }
@@ -118,9 +126,38 @@ button:hover {
         transform: translateY(0) scale(1);
         opacity: 0.8;
     }
+
     100% {
         transform: translateY(-100vh) scale(1.5);
         opacity: 0;
     }
 }
 
+
+
+
+
+/* Responsivo (Mobile) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .subtitulo {
+        font-size: 1rem;
+    }
+
+    .trecho-musica {
+        font-size: 0.95rem;
+    }
+
+    .fotos img {
+        width: 100%;
+        max-width: 90%;
+    }
+
+    .video iframe {
+        width: 100%;
+        height: 250px;
+    }
+}
